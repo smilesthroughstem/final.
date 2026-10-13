@@ -17,8 +17,12 @@ const timeline = [
 export default function ProjectsPage() {
   return (
     <main>
-      <section className="bg-secondary">
-        <div className="mx-auto max-w-6xl px-5 py-16 text-center sm:px-8 md:py-20">
+      <section
+        className="relative overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1641%20%281%29-VVabnDhSXKjWGp1YWiA2mJjybb7NR7.jpeg')" }}
+      >
+        <div className="absolute inset-0 bg-background/75" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-5 py-16 text-center sm:px-8 md:py-20">
           <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary">Our Work</p>
           <h1 className="mt-3 font-heading text-4xl font-extrabold tracking-tight text-balance sm:text-5xl">Projects</h1>
         </div>
