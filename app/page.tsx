@@ -43,7 +43,7 @@ export default function HomePage() {
       <section className="overflow-hidden bg-secondary">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:grid-cols-2 md:py-24 lg:gap-20">
           <div className="flex flex-col items-start gap-6">
-            <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">
               Bringing Smiles to Children Through STEM
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
