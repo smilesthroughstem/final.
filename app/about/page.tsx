@@ -10,8 +10,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <section className="bg-muted">
-        <div className="mx-auto max-w-6xl px-5 py-16 text-center sm:px-8 md:py-20">
+      <section
+        className="relative overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1641%20%281%29-VVabnDhSXKjWGp1YWiA2mJjybb7NR7.jpeg')" }}
+      >
+        <div className="absolute inset-0 bg-background/75" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-5 py-16 text-center sm:px-8 md:py-20">
           <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary">Learn More</p>
           <h1 className="mt-3 font-heading text-4xl font-extrabold tracking-tight text-balance sm:text-5xl">
             About Us
@@ -22,7 +26,7 @@ export default function AboutPage() {
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 md:grid-cols-[1.15fr_0.85fr] md:py-28 lg:gap-20">
         <div>
           <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary">The Story</p>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight sm:text-4xl">A personal mission</h2>
+          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight sm:text-4xl">A Personal Mission</h2>
           <div className="mt-7 flex flex-col gap-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
               {"My name is Arshia Malhotra, and I am a sophomore enrolled in a Medical School Early Acceptance Program at Middle Tennessee State University. Spending hours volunteering in a medical center and with organizations supporting those with disabilities exposed me to the struggles they face, particularly the children. These children often experience significant anxiety, and those with extended hospital stays might even be missing school to receive the care they require."}
