@@ -1,13 +1,41 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Building2, HandHeart, PackageOpen } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const impact = [
-  { value: '200+', label: 'Kits donated', icon: PackageOpen },
-  { value: '3', label: 'Partner organizations', icon: Building2 },
-  { value: '5', label: 'Volunteers', icon: HandHeart },
+  { value: 200, suffix: '+', label: 'Kits donated', icon: PackageOpen },
+  { value: 3, suffix: '', label: 'Partner organizations', icon: Building2 },
+  { value: 15, suffix: '', label: 'Volunteers', icon: HandHeart },
 ]
+
+function ImpactCounter({ value, suffix }: { value: number; suffix: string }) {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    const duration = 1400
+    const start = performance.now()
+    let frameId = 0
+
+    const updateCount = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1)
+      const easedProgress = 1 - Math.pow(1 - progress, 3)
+      setCount(Math.round(value * easedProgress))
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(updateCount)
+      }
+    }
+
+    frameId = requestAnimationFrame(updateCount)
+    return () => cancelAnimationFrame(frameId)
+  }, [value])
+
+  return <>{count}{suffix}</>
+}
 
 export default function HomePage() {
   return (
@@ -16,7 +44,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:grid-cols-2 md:py-24 lg:gap-20">
           <div className="flex flex-col items-start gap-6">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
-              Bringing smiles to children through STEM
+              Bringing Smiles to Children Through STEM
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
               An initiative that creates and donates hands-on STEM kits to alleviate the stress of children receiving medical treatment.
@@ -66,7 +94,9 @@ export default function HomePage() {
                   <span className="flex size-12 items-center justify-center rounded-full bg-secondary text-primary">
                     <Icon aria-hidden="true" className="size-5" />
                   </span>
-                  <p className="font-heading text-4xl font-extrabold text-primary">{item.value}</p>
+                  <p className="font-heading text-4xl font-extrabold text-primary" aria-label={`${item.value}${item.suffix} ${item.label}`}>
+                    <ImpactCounter value={item.value} suffix={item.suffix} />
+                  </p>
                   <p className="font-bold text-muted-foreground">{item.label}</p>
                 </article>
               )

@@ -19,7 +19,7 @@ export function SiteFooter() {
           <Link className="transition-colors hover:text-primary" href="mailto:smilesthroughstem@gmail.com">
             smilesthroughstem@gmail.com
           </Link>
-          <p>Student-led since 2024</p>
+          <p>Non-Exempt Tennessee Nonprofit</p>
         </div>
       </div>
     </footer>
