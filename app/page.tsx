@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:grid-cols-2 md:py-24 lg:gap-20">
           <div className="flex flex-col items-start gap-6">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
-              Bringing smiles to children through STEM
+              Bringing Smiles to Children Through STEM
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
               An initiative that creates and donates hands-on STEM kits to alleviate the stress of children receiving medical treatment.
