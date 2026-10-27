@@ -51,11 +51,11 @@
   --foreground: oklch(0.28 0.075 242);
   --primary: oklch(0.6 0.14 235);
   --primary-foreground: oklch(0.995 0.012 95);
-  --secondary: oklch(0.94 0.11 96);
+  --secondary: oklch(0.97 0.06 96);
   --secondary-foreground: oklch(0.28 0.075 242);
   --muted: oklch(0.955 0.04 235);
   --muted-foreground: color-mix(in oklch, var(--foreground) 68%, transparent);
-  --accent: oklch(0.94 0.11 96);
+  --accent: oklch(0.97 0.06 96);
   --accent-foreground: oklch(0.28 0.075 242);
   --destructive: oklch(0.28 0.075 242);
   --border: color-mix(in oklch, var(--primary) 22%, transparent);
