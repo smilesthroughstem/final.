@@ -3,13 +3,14 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Building2, HandHeart, PackageOpen } from 'lucide-react'
+import { ArrowRight, Building2, HandHeart, PackageOpen, School } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const impact = [
   { value: 200, suffix: '+', label: 'Kits donated', icon: PackageOpen },
   { value: 3, suffix: '', label: 'Partner organizations', icon: Building2 },
   { value: 15, suffix: '', label: 'Volunteers', icon: HandHeart },
+  { value: 3, suffix: '', label: 'School chapters', icon: School },
 ]
 
 function ImpactCounter({ value, suffix }: { value: number; suffix: string }) {
@@ -86,7 +87,7 @@ export default function HomePage() {
             <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary">Growing together</p>
             <h2 className="font-heading text-3xl font-extrabold tracking-tight sm:text-4xl">Our Impact</h2>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {impact.map((item) => {
               const Icon = item.icon
               return (
