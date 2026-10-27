@@ -3,13 +3,14 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Building2, HandHeart, PackageOpen } from 'lucide-react'
+import { ArrowRight, Building2, HandHeart, PackageOpen, School } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const impact = [
   { value: 200, suffix: '+', label: 'Kits donated', icon: PackageOpen },
   { value: 3, suffix: '', label: 'Partner organizations', icon: Building2 },
   { value: 15, suffix: '', label: 'Volunteers', icon: HandHeart },
+  { value: 3, suffix: '', label: 'School chapters', icon: School },
 ]
 
 function ImpactCounter({ value, suffix }: { value: number; suffix: string }) {
@@ -43,7 +44,7 @@ export default function HomePage() {
       <section className="overflow-hidden bg-secondary">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:grid-cols-2 md:py-24 lg:gap-20">
           <div className="flex flex-col items-start gap-6">
-            <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-balance text-black sm:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-balance text-[#0b1f3a] sm:text-5xl lg:text-6xl">
               Bringing Smiles to Children Through STEM
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -86,7 +87,7 @@ export default function HomePage() {
             <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary">Growing together</p>
             <h2 className="font-heading text-3xl font-extrabold tracking-tight sm:text-4xl">Our Impact</h2>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {impact.map((item) => {
               const Icon = item.icon
               return (
